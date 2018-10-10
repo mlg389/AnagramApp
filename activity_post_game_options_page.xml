@@ -10,37 +10,41 @@
         android:id="@+id/DetailsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Detailed Results"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="110dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/HomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="197dp" />
+        app:layout_constraintTop_toBottomOf="@+id/DetailsButton" />
 
     <Button
         android:id="@+id/NewLevelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Another Stage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="299dp" />
+        app:layout_constraintTop_toBottomOf="@+id/HomeButton" />
 
     <Button
         android:id="@+id/RepeatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Repeat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="397dp" />
+        app:layout_constraintTop_toBottomOf="@+id/NewLevelButton" />
 </android.support.constraint.ConstraintLayout>

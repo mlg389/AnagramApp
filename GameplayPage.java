@@ -20,7 +20,7 @@ public class GameplayPage extends AppCompatActivity {
         SubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGameplayPage();
+                openResultsPage();
             }
         });
 
@@ -28,7 +28,7 @@ public class GameplayPage extends AppCompatActivity {
         SkipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openGameplayPage();
+                openResultsPage();
             }
         });
 
@@ -41,8 +41,8 @@ public class GameplayPage extends AppCompatActivity {
         });
     }
 
-    public void openGameplayPage() {
-        Intent intent = new Intent(this, GameplayPage.class);
+    public void openResultsPage() {
+        Intent intent = new Intent(this, ResultsPage.class);
         startActivity(intent);
     }
 

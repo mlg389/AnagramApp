@@ -6,9 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
-/*
-CAN'T ACTUALLY REACH RIGHT NOW
- */
+
 
 public class ResultsPage extends AppCompatActivity {
     private Button NextButton;

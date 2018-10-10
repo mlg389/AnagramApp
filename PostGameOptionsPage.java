@@ -6,9 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
-/*
-CAN'T ACTUALLY REACH RIGHT NOW - tied to results page
- */
+
 
 public class PostGameOptionsPage extends AppCompatActivity {
     private Button DetailsButton;
@@ -21,7 +19,7 @@ public class PostGameOptionsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_game_options_page);
 
-        DetailsButton = (Button) findViewById(R.id.BackButton);
+        DetailsButton = (Button) findViewById(R.id.DetailsButton);
         DetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +54,7 @@ public class PostGameOptionsPage extends AppCompatActivity {
     }
 
     public void openDetailedResultsPage() {
-        Intent intent = new Intent(this, PostGameOptionsPage.class);
+        Intent intent = new Intent(this, DetailedResultsPage.class);
         startActivity(intent);
     }
 
