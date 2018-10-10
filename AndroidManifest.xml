@@ -19,7 +19,10 @@
         <activity android:name=".AboutPage" />
         <activity android:name=".GameplayPage" />
         <activity android:name=".ChallengeSelectionPage" />
-        <activity android:name=".LevelSelectionPage"></activity>
+        <activity android:name=".LevelSelectionPage" />
+        <activity android:name=".ResultsPage" />
+        <activity android:name=".PostGameOptionsPage" />
+        <activity android:name=".DetailedResultsPage"></activity>
     </application>
 
 </manifest>
