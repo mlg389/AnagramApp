@@ -5,22 +5,38 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class GameplayPage extends AppCompatActivity {
     private Button SubmitButton;
     private Button SkipButton;
     private Button QuitButton;
+    private EditText wordEntered;
+    private TextView newWord;
+    private TextView questionNumber;
+
+    private int wordsIncorrect;
+    private String userAnswers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay_page);
 
+        wordEntered = (EditText) findViewById(R.id.wordEntered);
+        newWord = (TextView) findViewById(R.id.newWord);
+        questionNumber = (TextView) findViewById(R.id.questionNumber);
+
+        newWord.setText(Anagram.EASY_WORDS[Anagram.getQuestionCounter() - 1]);
+        wordEntered.setText("");
+
         SubmitButton = (Button) findViewById(R.id.SubmitButton);
         SubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openResultsPage();
+                userAnswers = (wordEntered.getText().toString());
+                validate();
             }
         });
 
@@ -28,7 +44,8 @@ public class GameplayPage extends AppCompatActivity {
         SkipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openResultsPage();
+                //userAnswers[Anagram.getQuestionCounter() - 1] = (wordEntered.getText().toString());
+                validate();
             }
         });
 
@@ -39,6 +56,7 @@ public class GameplayPage extends AppCompatActivity {
                 openHomePage();
             }
         });
+
     }
 
     public void openResultsPage() {
@@ -51,4 +69,21 @@ public class GameplayPage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void validate() {
+        String wordToCheck = wordEntered.getText().toString();
+        if( Anagram.checkWord(wordToCheck) ) {
+            Anagram.updateQuestionCounter();
+            nextQuestion();
+        }
+        else {
+            wordsIncorrect++;
+            Anagram.updateQuestionCounter();
+            nextQuestion();
+        }
+    }
+
+    public void nextQuestion() {
+        newWord.setText(Anagram.EASY_WORDS[Anagram.getQuestionCounter() - 1]);
+        wordEntered.setText("");
+    }
 }
