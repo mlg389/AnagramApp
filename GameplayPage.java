@@ -37,6 +37,10 @@ public class GameplayPage extends AppCompatActivity {
             public void onClick(View v) {
                 userAnswers = (wordEntered.getText().toString());
                 validate();
+
+                if(Anagram.getQuestionCounter() == 7) {
+                    openResultsPage();
+                }
             }
         });
 
@@ -45,6 +49,7 @@ public class GameplayPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //userAnswers[Anagram.getQuestionCounter() - 1] = (wordEntered.getText().toString());
+                wordsIncorrect++;
                 validate();
             }
         });
@@ -84,6 +89,7 @@ public class GameplayPage extends AppCompatActivity {
 
     public void nextQuestion() {
         newWord.setText(Anagram.EASY_WORDS[Anagram.getQuestionCounter() - 1]);
+        questionNumber.setText("Question " + Anagram.getQuestionCounter() + "/6");
         wordEntered.setText("");
     }
 }

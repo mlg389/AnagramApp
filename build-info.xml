@@ -7,19 +7,19 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.1.4"
-    timestamp="1539645355833"
+    timestamp="1539646802440"
     token="-9205046130607280565"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="252" />
+        duration="162" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="35" />
+        duration="12" />
     <task
         name="verifier"
         duration="1" />
@@ -101,8 +101,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1539645338282"
+        ir-eligibility="STATIC_INITIALIZER_CHANGE"
+        timestamp="1539646773906"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/maria/CS399/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
@@ -111,7 +111,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1539645355833"
+        timestamp="1539646802440"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/maria/CS399/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
