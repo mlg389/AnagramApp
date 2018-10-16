@@ -16,8 +16,8 @@ public class GameplayPage extends AppCompatActivity {
     private TextView newWord;
     private TextView questionNumber;
 
-    private int wordsIncorrect;
-    private String userAnswers;
+    private static int wordsIncorrect;
+    public static String userAnswers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +49,11 @@ public class GameplayPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //userAnswers[Anagram.getQuestionCounter() - 1] = (wordEntered.getText().toString());
-                wordsIncorrect++;
                 validate();
+
+                if(Anagram.getQuestionCounter() == 7) {
+                    openResultsPage();
+                }
             }
         });
 
@@ -91,5 +94,9 @@ public class GameplayPage extends AppCompatActivity {
         newWord.setText(Anagram.EASY_WORDS[Anagram.getQuestionCounter() - 1]);
         questionNumber.setText("Question " + Anagram.getQuestionCounter() + "/6");
         wordEntered.setText("");
+    }
+
+    public static int getWordsIncorrect() {
+        return wordsIncorrect;
     }
 }
