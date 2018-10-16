@@ -45,7 +45,9 @@ Maria Granroth"
         android:text="Northern Arizona University
 CS399
 Mobile App Development
-Fall 2018"
+Fall 2018
+
+Thanks for playing!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />

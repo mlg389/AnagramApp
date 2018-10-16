@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class AboutPage extends AppCompatActivity {
+
     private Button BackButton;
 
     @Override
@@ -27,4 +28,6 @@ public class AboutPage extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+
 }

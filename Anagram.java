@@ -1,5 +1,7 @@
 package edu.nau.granroth_m_mitchell_j_anagramapp;
 
+import java.util.Arrays;
+
 public class Anagram {
     public static int questionCounter = 1;
 
@@ -11,6 +13,30 @@ public class Anagram {
 
 
     public static Boolean checkWord( String wordToCheck ) {
+
+        for( int arrayCounter = 0; arrayCounter < 6; arrayCounter++ )
+        {
+            if( wordToCheck.length() != EASY_WORDS_ANSWERS[arrayCounter].length() )
+            {
+                return false;
+            }
+
+            char[] wordToCheckArray = wordToCheck.toLowerCase().toCharArray();
+
+            char[] givenWordArray = EASY_WORDS_ANSWERS[arrayCounter].toLowerCase().toCharArray();
+
+            // Scrambling these arrays
+
+            Arrays.sort(wordToCheckArray);
+
+            Arrays.sort(givenWordArray);
+
+            return Arrays.equals(wordToCheckArray, givenWordArray);
+
+
+        }
+
+        /*
         for( int arrayCounter = 0; arrayCounter < 6; arrayCounter++ ) {
             if( wordToCheck.equals(EASY_WORDS_ANSWERS[arrayCounter]) ) {
                 return true;
@@ -20,6 +46,8 @@ public class Anagram {
             }
         }
 
+        return false;
+        */
         return false;
     }
 
