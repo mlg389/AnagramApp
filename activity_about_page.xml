@@ -26,9 +26,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="Developed by
-Jasmine Mitchell
-and
-Maria Granroth"
+\nJasmine Mitchell
+\nand
+\nMaria Granroth"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AboutTitle" />
@@ -43,11 +44,11 @@ Maria Granroth"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:text="Northern Arizona University
-CS399
-Mobile App Development
-Fall 2018
-
-Thanks for playing!"
+\nCS399
+\nMobile App Development
+\nFall 2018
+\n\nThanks for playing!"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
